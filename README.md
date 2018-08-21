@@ -4,7 +4,11 @@ Now you can filter your model dynamically.
 This is not a powerful search system, but this can help you with small projects 
 when you need more time in others features and simple filters.
 
-## Using
+```
+composer require leocarmo/laravel-eloquent-model-filter
+```
+
+## Usage
 
 First, implement the `Trait` on your model, like this:
 
@@ -20,8 +24,9 @@ class YourModel extends Model
 }
 ```
 
-At now, you can use all available methods, we will pass thought later. 
+Now you can use all available methods, we will pass thought later. 
 But after this, some required attributes are required to use all features from this filter.
+
 ---
 First attribute is `filterable`, with these you can set all allowed filters and the operator for this attribute. Like this:
 ```php
