@@ -1,0 +1,22 @@
+{
+    "name": "leocarmo/laravel-eloquent-model-filter",
+    "description": "Filter your Eloquent Model easier",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "leocarmo",
+            "email": "leonardo.docarmo@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+        "autoload": {
+            "psr-4": {
+            "LeoCarmo\\ModelFilter\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7"
+    }
+}
