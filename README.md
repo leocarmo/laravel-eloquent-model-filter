@@ -8,8 +8,8 @@ when you need more time in others features and simple filters.
 
 First, implement the `Trait` on your model, like this:
 
-```
-use LeoCarmo\Traits\FilterableModel;
+```php
+use LeoCarmo\ModelFilter\Traits\FilterableModel;
 use Illuminate\Database\Eloquent\Model;
 
 class YourModel extends Model
@@ -24,7 +24,7 @@ At now, you can use all available methods, we will pass thought later.
 But after this, some required attributes are required to use all features from this filter.
 ---
 First attribute is `filterable`, with these you can set all allowed filters and the operator for this attribute. Like this:
-```
+```php
 class YourModel extends Model
 {
 
@@ -45,7 +45,7 @@ The second is `filterable_select`, with these you set columns to select on query
 This is very important for fast queries. If this attribute is not present on model, all
 columns will be returned (`*` operator).
 
-```
+```php
 class YourModel extends Model
 {
 
@@ -59,7 +59,7 @@ class YourModel extends Model
 ```
 
 Now, all required configurations are set. You can start all your filters like this:
-```
+```php
 class YourController
 {
 
@@ -94,7 +94,7 @@ This method will push new columns to the select query.
 ---
 Example: on your model you defined `id` and `name`, but in a specific request you want to show the `age`, you can use this method.
 
-```
+```php
 $model->pushFilterableSelect('age');
 // OR
 $model->pushFilterableSelect(['age', 'created_at']);
@@ -106,7 +106,7 @@ With this, you can push new columns to allowed filter or change the operator for
 
 ---
 If you push a column that was defined on model with the attribute `filterable` and an operator, the original value will be override with the new operator.
-```
+```php
 // this first example will not overide the original column if the default value has an operator seted, but will push to the allowed filters if was not defined
 $model->pushFilterable('age'); 
 
@@ -118,7 +118,7 @@ $model->pushFilterable(['age' => '>']);
 #### changeDefaultOperator()
 
 The default operator is `=` when no operator was defined on model. If you want, you can change this:
-```
+```php
 $model->changeDefaultOperator('LIKE'); 
 ```
 
