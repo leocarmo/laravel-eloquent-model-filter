@@ -1,5 +1,10 @@
 # Laravel Eloquent model filter
 
+[![Code Quality](https://scrutinizer-ci.com/g/leocarmo/laravel-eloquent-model-filter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/leocarmo/php-telegram-bot/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/leocarmo/laravel-eloquent-model-filter/badges/build.png?b=master)](https://scrutinizer-ci.com/g/leocarmo/php-telegram-bot/build-status/master)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/leocarmo/laravel-eloquent-model-filter/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+[![Total Downloads](https://img.shields.io/packagist/dt/leocarmo/laravel-eloquent-model-filter.svg)](https://packagist.org/packages/leocarmo/laravel-eloquent-model-filter)
+
 Now you can filter your model dynamically. 
 This is not a powerful search system, but this can help you with small projects 
 when you need more time in others features and simple filters.
